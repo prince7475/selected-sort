@@ -1,0 +1,112 @@
+write a function that takes in an array of integers and 
+returns a sorted version of that array, use the selection sort algorithm to sort the array
+
+function selectionSort(array){
+  for(let i = 0; i < array.length - 1; i++){
+    let sV = array[i + 1]
+    let smIdx = i + 1
+    for(let j = i + 1; j < array.length; j++){
+        let curr = array[j]
+        if(curr < sV){
+          sV = curr
+          smIdx = j
+        }
+     }
+     if(array[i] > array[smIdx]){
+     swap(smIdx, i, array)
+     }
+  }
+  
+  return array
+}
+
+function swap (i,j,array){
+  let temp = array[i]
+  array[i] = array[j]
+  array[j] = temp
+}
+
+
+have two pointers 
+left = 0
+right = left + 1
+let smallest = array[right]
+let idxOfSmallest = right
+loop while(right < array.length){
+  curr = array[right]
+  if(curr < smallest) {
+    smallest = curr
+    idxOfSmallest = right
+  }
+}
+
+swap(left, idxOfSmllest array)
+left++
+
+
+return array
+
+
+
+
+
+
+
+
+Time --> O(N^2)
+Space --> O(1)
+function selectionSort(array){
+  
+  for(let i = 0; i < array.length - 1; i++){
+    let smV = array[i + 1]
+    let smIdx  = i + 1
+    for(let j = i + 1; j < array.length; j++){
+        let curr = array[j]
+        if(curr < smV){
+          smV= curr
+          smIdx = j
+        }
+    }
+    if(smV < array[i]){
+      swap(i,smIdx,array)
+    }
+  }
+  
+  return array
+}
+
+function swap(i,j,array){
+  let temp = array[i]
+  array[i] = array[j]
+  array[j] = temp
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
